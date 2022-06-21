@@ -6,13 +6,77 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <!-- Design code for the light background of page. -->
+
+    <ImageView
+        android:id="@+id/LightBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/LightBackground"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/lightbackground" />
+
+    <!-- Design code for the Title text. -->
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:fontFamily="@font/architects_daughter"
+        android:gravity="center_horizontal"
+        android:text="@string/Title"
+        android:textColor="#000000"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.228" />
+
+    <!-- Design code for the Login text. -->
+
+    <TextView
+        android:id="@+id/Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/architects_daughter"
+        android:text="@string/Login"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/LightBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/LightBackground"
+        app:layout_constraintVertical_bias="0.443"
+        tools:text="Login here:" />
+
+    <!-- Design code for the Username entry box. -->
+
+    <EditText
+        android:id="@+id/Username"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/Login"
+        android:layout_margin="10dp"
+        android:autofillHints=""
+        android:hint="@string/Username"
+        android:inputType="textPersonName"
+        android:padding="20dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Login"
+        app:layout_constraintVertical_bias="0.275" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

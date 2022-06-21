@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Mental Health App</string>
+    <string name="LightBackground">TODO</string>
+    <string name="Title">Mental Health Game</string>
+    <string name="Login">TextView</string>
+    <string name="Username">Username....</string>
 </resources>
