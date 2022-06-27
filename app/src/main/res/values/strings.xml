@@ -3,6 +3,8 @@
     <string name="LightBackground">TODO</string>
     <string name="Title">Mental Health Game</string>
     <string name="Login">TextView</string>
-    <string name="Username">Username....</string>
+    <string name="Username">Username </string>
     <string name="UsernameForeground">UsernameForeground</string>
+    <string name="Password" > Password </string>
+    <string name="PasswordForeground" />
 </resources>
