@@ -8,6 +8,8 @@
 
     <!-- Design code for the light background of page. -->
 
+    <!-- Design code for the Title text. -->
+
     <ImageView
         android:id="@+id/LightBackground"
         android:layout_width="0dp"
@@ -15,13 +17,11 @@
         android:contentDescription="@string/LightBackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/lightbackground" />
-
-    <!-- Design code for the Title text. -->
 
     <TextView
         android:id="@+id/Title"
@@ -88,6 +88,8 @@
         app:layout_constraintVertical_bias="0.565"
         app:srcCompat="@drawable/entrybackground" />
 
+    <!-- Design code for the Username text. -->
+
     <EditText
         android:id="@+id/Username"
         android:layout_width="393dp"
@@ -110,7 +112,7 @@
         app:layout_constraintVertical_bias="0.058"
         android:autofillHints="" />
 
-    <!-- Design code for the Username entry box. -->
+    <!-- Design code for the Password entry box. -->
     <!-- Constraints used to ensure the box remains behind the entry text. -->
     <EditText
         android:id="@+id/Password"
@@ -133,6 +135,22 @@
         app:layout_constraintTop_toBottomOf="@+id/Username"
         app:layout_constraintVertical_bias="0.058" />
 
-    <!-- Design code for the Username text. -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/StartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Password"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/architects_daughter"
+        android:text="@string/StartButton"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/LightBackground"
+        app:layout_constraintStart_toStartOf="@+id/LightBackground"
+        app:layout_constraintTop_toBottomOf="@+id/Password"
+        app:layout_constraintVertical_bias="0.14" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

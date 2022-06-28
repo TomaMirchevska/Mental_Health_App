@@ -7,4 +7,5 @@
     <string name="UsernameForeground">UsernameForeground</string>
     <string name="Password" > Password </string>
     <string name="PasswordForeground" />
+    <string name="StartButton">START</string>
 </resources>
