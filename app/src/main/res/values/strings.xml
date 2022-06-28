@@ -8,4 +8,5 @@
     <string name="Password" > Password </string>
     <string name="PasswordForeground" />
     <string name="StartButton">START</string>
+    <string name="RegisterButton">Register here</string>
 </resources>
