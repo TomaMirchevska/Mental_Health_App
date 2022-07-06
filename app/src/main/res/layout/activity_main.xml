@@ -20,7 +20,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/lightbackground" />
 
     <TextView
@@ -43,7 +43,7 @@
     <!-- Design code for the Login text. -->
 
     <TextView
-        android:id="@+id/Login"
+        android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/architects_daughter"
@@ -61,68 +61,69 @@
     <!-- Design code for the Username entry box. -->
     <!-- Constraints used to ensure the box remains behind the entry text. -->
     <ImageView
-        android:id="@+id/UsernameForeground"
+        android:id="@+id/username_foreground"
         android:layout_width="379dp"
         android:layout_height="45dp"
-        android:contentDescription="@string/UsernameForeground"
         app:layout_constraintBottom_toBottomOf="@+id/LightBackground"
         app:layout_constraintEnd_toEndOf="@+id/LightBackground"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/Username"
-        app:layout_constraintTop_toBottomOf="@id/Username"
+        app:layout_constraintBottom_toTopOf="@id/login_username"
+        app:layout_constraintTop_toBottomOf="@id/login_username"
         app:layout_constraintVertical_bias="0.565"
         app:srcCompat="@drawable/entrybackground" />
 
     <!-- Design code for the Username text. -->
 
     <ImageView
-        android:id="@+id/PasswordForeground"
+        android:id="@+id/password_foreground"
         android:layout_width="379dp"
         android:layout_height="45dp"
-        android:contentDescription="@string/PasswordForeground"
         app:layout_constraintBottom_toBottomOf="@+id/LightBackground"
-        app:layout_constraintBottom_toTopOf="@id/Password"
+        app:layout_constraintBottom_toTopOf="@id/login_password"
         app:layout_constraintEnd_toEndOf="@+id/LightBackground"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Password"
+        app:layout_constraintTop_toBottomOf="@id/login_password"
         app:layout_constraintVertical_bias="0.565"
         app:srcCompat="@drawable/entrybackground" />
 
-    <!-- Design code for the Username text. -->
+    <!-- Design code for the Username Email text. -->
+
+    <!-- Design code for the Password entry box. -->
+    <!-- Constraints used to ensure the box remains behind the entry text. -->
 
     <EditText
-        android:id="@+id/Username"
+        android:id="@+id/login_username"
         android:layout_width="393dp"
         android:layout_height="71dp"
-        android:layout_below="@id/Login"
+        android:layout_below="@id/login"
         android:layout_margin="10dp"
+        android:autofillHints=""
         android:fontFamily="@font/architects_daughter"
         android:gravity="center"
         android:hint="@string/Username"
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
         android:padding="20dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.888"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Login"
-        app:layout_constraintVertical_bias="0.058"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/login"
+        app:layout_constraintVertical_bias="0.113" />
 
-    <!-- Design code for the Password entry box. -->
-    <!-- Constraints used to ensure the box remains behind the entry text. -->
     <EditText
-        android:id="@+id/Password"
+        android:id="@+id/login_password"
         android:layout_width="393dp"
         android:layout_height="71dp"
         android:layout_margin="10dp"
+        android:layout_marginBottom="192dp"
         android:autofillHints=""
         android:fontFamily="@font/architects_daughter"
         android:gravity="center"
         android:hint="@string/Password"
+        android:imeActionId="@integer/login"
         android:inputType="textPassword"
         android:padding="20dp"
         android:textColor="@color/black"
@@ -130,16 +131,20 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.888"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Username"
+        app:layout_constraintTop_toBottomOf="@+id/login_username"
         app:layout_constraintVertical_bias="0.058" />
 
+    <!-- Design code for the Start Button. -->
+
+    <!-- Design code for the Register Button. -->
+
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/StartButton"
+        android:id="@+id/start_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/Password"
+        android:layout_below="@id/login_password"
         android:layout_centerHorizontal="true"
         android:backgroundTint="@color/white"
         android:fontFamily="@font/architects_daughter"
@@ -149,25 +154,25 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/LightBackground"
         app:layout_constraintStart_toStartOf="@+id/LightBackground"
-        app:layout_constraintTop_toBottomOf="@+id/Password"
-        app:layout_constraintVertical_bias="0.14" />
+        app:layout_constraintTop_toBottomOf="@+id/password_foreground"
+        app:layout_constraintVertical_bias="0.224" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/RegisterButton"
+        android:id="@+id/register_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/StartButton"
+        android:layout_below="@id/start_button"
         android:layout_centerHorizontal="true"
         android:backgroundTint="@color/black"
         android:fontFamily="@font/architects_daughter"
+        android:onClick="registerNewUser"
         android:text="@string/RegisterButton"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/LightBackground"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Password"
-        app:layout_constraintVertical_bias="0.619" />
+        app:layout_constraintTop_toBottomOf="@+id/start_button"
+        app:layout_constraintVertical_bias="0.338" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
