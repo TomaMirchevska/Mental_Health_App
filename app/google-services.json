@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "950163669843",
+    "project_id": "toma-s-app",
+    "storage_bucket": "toma-s-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950163669843:android:eb27657b44a6ee382bd7a6",
+        "android_client_info": {
+          "package_name": "com.Toma.mentalhealth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "950163669843-s0h1e4h50gkot75enfba13oanmjai02m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnAFR70HS4J0ywTR9a13Sc1FZ8FH_wM4A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "950163669843-s0h1e4h50gkot75enfba13oanmjai02m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950163669843:android:960c9c5760f77ad42bd7a6",
+        "android_client_info": {
+          "package_name": "com.example.mentalhealthapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "950163669843-s0h1e4h50gkot75enfba13oanmjai02m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnAFR70HS4J0ywTR9a13Sc1FZ8FH_wM4A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "950163669843-s0h1e4h50gkot75enfba13oanmjai02m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
