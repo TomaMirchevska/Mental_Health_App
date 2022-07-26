@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="com.example.mentalhealthapp.LoginActivity">
 
     <!-- Design code for the light background of page. -->
 
@@ -70,7 +71,8 @@
         app:layout_constraintBottom_toTopOf="@id/login_username"
         app:layout_constraintTop_toBottomOf="@id/login_username"
         app:layout_constraintVertical_bias="0.565"
-        app:srcCompat="@drawable/entrybackground" />
+        app:srcCompat="@drawable/entrybackground"
+        tools:ignore="ContentDescription" />
 
     <!-- Design code for the Username text. -->
 
@@ -84,7 +86,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/login_password"
         app:layout_constraintVertical_bias="0.565"
-        app:srcCompat="@drawable/entrybackground" />
+        app:srcCompat="@drawable/entrybackground"
+        tools:ignore="ContentDescription" />
 
     <!-- Design code for the Username Email text. -->
 
