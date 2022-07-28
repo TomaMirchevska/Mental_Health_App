@@ -1,31 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- Code for the parent display. -->
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mentalhealthapp.LoginActivity">
+    tools:context="com.example.mentalhealthapp.LoginActivity"
+    android:background="@drawable/lightbackground"
+    >
 
-    <!-- Design code for the light background of page. -->
 
-    <!-- Design code for the Title text. -->
+    <!-- Code for the Title text. -->
 
-    <ImageView
-        android:id="@+id/LightBackground"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:contentDescription="@string/LightBackground"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/lightbackground" />
+    <!-- Code for the Login text. -->
 
     <TextView
-        android:id="@+id/Title"
+        android:id="@+id/title"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:elevation="10dp"
@@ -39,68 +31,32 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.228" />
+        app:layout_constraintVertical_bias="0.209" />
 
-    <!-- Design code for the Login text. -->
-
+    <!-- Code for the Email entry box. -->
     <TextView
         android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/architects_daughter"
-        android:text="@string/Login"
+        android:text="@string/loginHeading"
         android:textColor="#000000"
         android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="@+id/LightBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/LightBackground"
-        app:layout_constraintVertical_bias="0.443"
-        tools:text="Login here:" />
-
-    <!-- Design code for the Username entry box. -->
-    <!-- Constraints used to ensure the box remains behind the entry text. -->
-    <ImageView
-        android:id="@+id/username_foreground"
-        android:layout_width="379dp"
-        android:layout_height="45dp"
-        app:layout_constraintBottom_toBottomOf="@+id/LightBackground"
-        app:layout_constraintEnd_toEndOf="@+id/LightBackground"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/login_username"
-        app:layout_constraintTop_toBottomOf="@id/login_username"
-        app:layout_constraintVertical_bias="0.565"
-        app:srcCompat="@drawable/entrybackground"
-        tools:ignore="ContentDescription" />
-
-    <!-- Design code for the Username text. -->
-
-    <ImageView
-        android:id="@+id/password_foreground"
-        android:layout_width="379dp"
-        android:layout_height="45dp"
-        app:layout_constraintBottom_toBottomOf="@+id/LightBackground"
-        app:layout_constraintBottom_toTopOf="@id/login_password"
-        app:layout_constraintEnd_toEndOf="@+id/LightBackground"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/login_password"
-        app:layout_constraintVertical_bias="0.565"
-        app:srcCompat="@drawable/entrybackground"
-        tools:ignore="ContentDescription" />
-
-    <!-- Design code for the Username Email text. -->
-
-    <!-- Design code for the Password entry box. -->
-    <!-- Constraints used to ensure the box remains behind the entry text. -->
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintVertical_bias="0.092" />
 
     <EditText
         android:id="@+id/login_username"
-        android:layout_width="393dp"
-        android:layout_height="71dp"
+        android:layout_width="370dp"
+        android:layout_height="66dp"
         android:layout_below="@id/login"
         android:layout_margin="10dp"
         android:autofillHints=""
+        android:background="@drawable/entrybackground"
         android:fontFamily="@font/architects_daughter"
         android:gravity="center"
         android:hint="@string/Username"
@@ -111,18 +67,23 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.888"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login"
-        app:layout_constraintVertical_bias="0.113" />
+        app:layout_constraintVertical_bias="0.075" />
 
+    <!-- Design code for the Password entry box. -->
+
+    <!-- Design code for the Start Button. -->
+
+    <!-- Design code for the Register Button. -->
     <EditText
         android:id="@+id/login_password"
-        android:layout_width="393dp"
-        android:layout_height="71dp"
+        android:layout_width="368dp"
+        android:layout_height="68dp"
         android:layout_margin="10dp"
         android:layout_marginBottom="192dp"
         android:autofillHints=""
+        android:background="@drawable/entrybackground"
         android:fontFamily="@font/architects_daughter"
         android:gravity="center"
         android:hint="@string/Password"
@@ -134,14 +95,10 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_username"
-        app:layout_constraintVertical_bias="0.058" />
-
-    <!-- Design code for the Start Button. -->
-
-    <!-- Design code for the Register Button. -->
+        app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/start_button"
@@ -155,10 +112,10 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/LightBackground"
-        app:layout_constraintStart_toStartOf="@+id/LightBackground"
-        app:layout_constraintTop_toBottomOf="@+id/password_foreground"
-        app:layout_constraintVertical_bias="0.224" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_password"
+        app:layout_constraintVertical_bias="0.135" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/register_button"
@@ -169,13 +126,13 @@
         android:backgroundTint="@color/black"
         android:fontFamily="@font/architects_daughter"
         android:onClick="registerNewUser"
-        android:text="@string/RegisterButton"
+        android:text="@string/registerButton"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/LightBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/start_button"
-        app:layout_constraintVertical_bias="0.338" />
+        app:layout_constraintVertical_bias="0.166" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
