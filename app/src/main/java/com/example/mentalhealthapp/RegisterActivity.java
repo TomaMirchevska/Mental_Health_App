@@ -28,14 +28,16 @@ public class RegisterActivity extends AppCompatActivity {
 
     // TODO: Add member variables here:
     // UI references.
-    private AutoCompleteTextView mEmailView;
-    private AutoCompleteTextView mUsernameView;
+    private EditText mEmailView;
+    private EditText mUsernameView;
     private EditText mPasswordView;
     private EditText mConfirmPasswordView;
 
     // Firebase instance variables
 
     private FirebaseAuth mAuth;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,7 +121,9 @@ public class RegisterActivity extends AppCompatActivity {
 
     private boolean isPasswordValid(String password) {
         //TODO: Add own logic to check for a valid password (minimum 6 characters)
-        return true;
+        String confirmPassword = mConfirmPasswordView.getText().toString();
+        //Only return true if its the same as the first entry and length is over 5 characters.
+        return confirmPassword.equals(password) && password.length()>6;
     }
 
     // Firebase user
@@ -128,20 +132,23 @@ public class RegisterActivity extends AppCompatActivity {
         String email=mEmailView.getText().toString();
         String password = mPasswordView.getText().toString();
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this,
-                task -> {
-                    if (task.isSuccessful()){
-                        //TODO: if users signs up
-                }else{
-                        //TODO if sign up fails
+                new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        Log.d("Firebase", "createUser onComplete;" + task.isSuccessful());
+                        if (!task.isSuccessful()) {
+                            Log.d("Firebase", "User creation failed");
+                            showErrorDialog("Registration Attempt has Failed");
+                        }
                     }
 
-            });
+                });
     }
 
     // TODO: Save the display name to Shared Preferences
 
 
-    // TODO: Create an alert dialog to show in case registration failed
+    // Alert dialog to show in case registration failed
 
     private void showErrorDialog(String message){
         new AlertDialog.Builder(this)
