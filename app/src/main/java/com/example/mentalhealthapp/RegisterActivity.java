@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.button.MaterialButton;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -49,6 +50,13 @@ public class RegisterActivity extends AppCompatActivity {
         mPasswordView = findViewById(R.id.register_password);
         mConfirmPasswordView = findViewById(R.id.register_confirm_password);
         mUsernameView = findViewById(R.id.register_username);
+        MaterialButton RegisterButton = (MaterialButton) findViewById(R.id.register_sign_up_button);
+
+        RegisterButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+            }
+        });
 
         // Keyboard sign in action
         mConfirmPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -124,7 +132,7 @@ public class RegisterActivity extends AppCompatActivity {
         //TODO: Add own logic to check for a valid password (minimum 6 characters)
         String confirmPassword = mConfirmPasswordView.getText().toString();
         //Only return true if its the same as the first entry and length is over 5 characters.
-        return confirmPassword.equals(password) && password.length()>6;
+        return confirmPassword.equals(password) && password.length()>5;
     }
 
     // Firebase user
@@ -135,10 +143,14 @@ public class RegisterActivity extends AppCompatActivity {
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful())
                         Log.d("Firebase", "createUser onComplete;" + task.isSuccessful());
+
+
                         if (!task.isSuccessful()) {
                             Log.d("Firebase", "User creation failed");
                             showErrorDialog("Registration Attempt has Failed");
+                            showSomething();
                         }
                     }
 
@@ -158,6 +170,16 @@ public class RegisterActivity extends AppCompatActivity {
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .show();
     }
+
+    private void showSomething(){
+        new AlertDialog.Builder(this)
+                .setTitle("Oops")
+                .setMessage("This works")
+                .setPositiveButton(android.R.string.ok, null)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .show();
+    }
+
 
 
 }
