@@ -1,5 +1,6 @@
 package com.example.mentalhealthapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 //import android.support.v7.app.AppCompatActivity;
 import androidx.annotation.NonNull;
@@ -131,8 +132,7 @@ public class RegisterActivity extends AppCompatActivity {
     private void createFirebaseUser() {
         String email=mEmailView.getText().toString();
         String password = mPasswordView.getText().toString();
-        mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this,
-                new OnCompleteListener<AuthResult>() {
+        mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         Log.d("Firebase", "createUser onComplete;" + task.isSuccessful());

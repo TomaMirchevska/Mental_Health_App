@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">Mental Health Game</string>
-    <string name="title">Mental Health Game</string>
-    <string name="loginHeading">Login here: </string>
-    <string name="confirmButton"> Confirm </string>
+    <string name="app_name">Mental Health Game </string>
+    <string name="title">Mental Health Game </string>
+    <string name="loginHeading">Login here </string>
+    <string name="confirmButton"> Create Account </string>
     <string name="username"> Email </string>
     <string name="password" > Password </string>
     <string name="startButton">START</string>
-    <string name="registerButton">Register here</string>
+    <string name="registerText">Register here</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_email_again">Confirm Email</string>
     <string name="prompt_password">Password</string>
