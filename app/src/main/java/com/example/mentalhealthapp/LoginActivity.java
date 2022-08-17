@@ -15,12 +15,13 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.button.MaterialButton;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 
 public class LoginActivity extends AppCompatActivity {
-    // TODO: Add member variables here:
+    // Member variables here
     private FirebaseAuth mAuth; //This variable to authenticate the user
 
     // UI references.
@@ -32,6 +33,14 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mEmailView = findViewById(R.id.login_username);
         mPasswordView = findViewById(R.id.login_password);
+        MaterialButton StartButton = (MaterialButton) findViewById(R.id.start_button);
+
+        StartButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+            }
+        });
+
         // This will listen to the enter button on the keyboard.
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -51,7 +60,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        // TODO: Grab an instance of FirebaseAuth
+        // Instance of FirebaseAuth
             mAuth = FirebaseAuth.getInstance();
     }
 

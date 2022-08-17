@@ -51,12 +51,21 @@ public class RegisterActivity extends AppCompatActivity {
         mConfirmPasswordView = findViewById(R.id.register_confirm_password);
         mUsernameView = findViewById(R.id.register_username);
         MaterialButton RegisterButton = (MaterialButton) findViewById(R.id.register_sign_up_button);
+        MaterialButton BackButton = (MaterialButton) findViewById(R.id.back_to_login_button);
 
         RegisterButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
             }
         });
+
+        BackButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view) {
+                startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+            }
+
+        });
+
 
         // Keyboard sign in action
         mConfirmPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -79,6 +88,10 @@ public class RegisterActivity extends AppCompatActivity {
     // Executed when Sign Up button is pressed.
     public void signUp(View v) {
         attemptRegistration();
+    }
+
+    public void backMenu(View v) {
+        new LoginActivity();
     }
 
     private void attemptRegistration() {
