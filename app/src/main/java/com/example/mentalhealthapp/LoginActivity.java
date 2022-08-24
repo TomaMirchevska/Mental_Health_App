@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,10 +31,10 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
         mEmailView = findViewById(R.id.login_username);
         mPasswordView = findViewById(R.id.login_password);
-        MaterialButton StartButton = (MaterialButton) findViewById(R.id.start_button);
+        Button StartButton = (Button) findViewById(R.id.start_button);
 
         StartButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){

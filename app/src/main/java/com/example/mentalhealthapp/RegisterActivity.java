@@ -12,6 +12,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -50,9 +51,10 @@ public class RegisterActivity extends AppCompatActivity {
         mPasswordView = findViewById(R.id.register_password);
         mConfirmPasswordView = findViewById(R.id.register_confirm_password);
         mUsernameView = findViewById(R.id.register_username);
-        MaterialButton RegisterButton = (MaterialButton) findViewById(R.id.register_sign_up_button);
-        MaterialButton BackButton = (MaterialButton) findViewById(R.id.back_to_login_button);
+        Button RegisterButton = (Button) findViewById(R.id.register_sign_up_button);
+        Button BackButton = (Button) findViewById(R.id.back_to_login_button);
 
+        // MAKE MATERIAL BUTTONS NORMAL BUTTONS
         RegisterButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
