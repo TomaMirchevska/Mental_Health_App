@@ -45,12 +45,13 @@
         app:layout_constraintTop_toBottomOf="@+id/title"
         app:layout_constraintVertical_bias="0.031" />
 
+
     <EditText
-        android:id="@+id/register_username"
+        android:id="@+id/register_email"
         android:layout_width="373dp"
         android:layout_height="43dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="10dp"
         android:background="@drawable/entrybackground"
         android:gravity="center"
@@ -65,9 +66,8 @@
         app:layout_constraintTop_toBottomOf="@id/register_title"
         tools:ignore="TouchTargetSizeCheck" />
 
-
     <EditText
-        android:id="@+id/register_email"
+        android:id="@+id/email_confirm"
         android:layout_width="366dp"
         android:layout_height="42dp"
         android:layout_marginStart="10dp"
@@ -85,15 +85,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_username"
+        app:layout_constraintTop_toBottomOf="@+id/register_email"
         tools:ignore="TouchTargetSizeCheck" />
+
 
     <EditText
         android:id="@+id/register_password"
         android:layout_width="367dp"
         android:layout_height="46dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="96dp"
         android:layout_marginEnd="10dp"
         android:background="@drawable/entrybackground"
         android:gravity="center"
@@ -105,18 +106,17 @@
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintHorizontal_bias="0.375"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/register_email"
         tools:ignore="TouchTargetSizeCheck" />
-
 
     <EditText
         android:id="@+id/register_confirm_password"
         android:layout_width="374dp"
         android:layout_height="40dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="10dp"
         android:background="@drawable/entrybackground"
         android:gravity="center"
@@ -153,7 +153,7 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/register_confirm_password"
-        app:layout_constraintVertical_bias="0.122"
+        app:layout_constraintVertical_bias="0.171"
         app:rippleColor="#FFFFFF"
         tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
 
@@ -177,7 +177,7 @@
         app:layout_constraintHorizontal_bias="0.04"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/register_sign_up_button"
-        app:layout_constraintVertical_bias="0.436"
+        app:layout_constraintVertical_bias="0.376"
         app:rippleColor="#FFFFFF"
         tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
 

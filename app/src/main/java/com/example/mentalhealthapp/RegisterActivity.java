@@ -11,14 +11,12 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
-import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.button.MaterialButton;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -31,10 +29,10 @@ public class RegisterActivity extends AppCompatActivity {
 
     // TODO: Add member variables here:
     // UI references.
-    private EditText mEmailView;
-    private EditText mUsernameView;
-    private EditText mPasswordView;
-    private EditText mConfirmPasswordView;
+    public EditText mEmailView;
+    public EditText mEmailConfirmView;
+    public EditText mPasswordView;
+    public EditText mConfirmPasswordView;
 
     // Firebase instance variables
 
@@ -48,9 +46,12 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         mEmailView = findViewById(R.id.register_email);
+        mEmailView.setAutofillHints(View.AUTOFILL_HINT_EMAIL_ADDRESS);
         mPasswordView = findViewById(R.id.register_password);
+        mEmailView.setAutofillHints(View.AUTOFILL_HINT_EMAIL_ADDRESS);
         mConfirmPasswordView = findViewById(R.id.register_confirm_password);
-        mUsernameView = findViewById(R.id.register_username);
+        mEmailConfirmView = findViewById(R.id.email_confirm);
+        mEmailView.setAutofillHints(View.AUTOFILL_HINT_EMAIL_ADDRESS);
         Button RegisterButton = (Button) findViewById(R.id.register_sign_up_button);
         Button BackButton = (Button) findViewById(R.id.back_to_login_button);
 

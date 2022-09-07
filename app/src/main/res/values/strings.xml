@@ -23,21 +23,25 @@
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
+        completions."</string>
+
+    <string name="good_button">"Good"</string>
+    <string name="bad_button">"Bad"</string>
 
     <string name="correct_toast">"That's Correct !</string>
     <string name="incorrect_toast">"Sorry that's Incorrect !</string>
 
     <string name="score_board">"Score = 0"</string>
 
-    <string name="Question1">"What's a good way to cope with being upset ?" </string>
-    <string name="Question2">"What's a good way to cope with being angry ?" </string>
-    <string name="Question3">"What's a good way to cope with having anxiety ?" </string>
-    <string name="Question4">"What's a way to contain a happy and positive mindset ?" </string>
-    <string name="Question5">"How can a friend help a person who is undergoing unwell emotions ?" </string>
-    <string name="Question6">"What else could you do to maintain a healthy wellbeing ?</string>
-
-
-    </string>
+    <string name="question_1">"Expressing your feelings to someone" </string>
+    <string name="question_2">"Write it down and tear it to pieces" </string>
+    <string name="question_3">"Distracting yourself with things you hate" </string>
+    <string name="question_4">"Doing exercise" </string>
+    <string name="question_5">"Breathing very heavily and fast" </string>
+    <string name="question_6">"Watch a funny video or show"</string>
+    <string name="question_7">"Focus on the bad things that have happened in the past"</string>
+    <string name="question_8">"Do something generous for someone else"</string>
+    <string name="question_9">"Meditation or yoga"</string>
+    <string name="question_10">"Bring a friend to counselling and have listen to you"</string>
     <string name="sample_message">Hello!</string>
 </resources>
