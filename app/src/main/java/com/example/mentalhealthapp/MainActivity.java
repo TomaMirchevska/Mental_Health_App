@@ -20,6 +20,10 @@ public class MainActivity extends AppCompatActivity {
     TextView scoreTextView;
     TextView questionTextView;
     ProgressBar progressBar;
+    // Index variable to retrieve question from an array and  which question is on display.
+    int index;
+    // Int variable that holds the question id.
+    int question;
 
     // Question Bank.
     private GoodBad[] questionBank = new com.example.mentalhealthapp.GoodBad[] {
@@ -46,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
         questionTextView = findViewById(R.id.question_text);
         scoreTextView = findViewById(R.id.score_text);
         progressBar = findViewById(R.id.progress_bar);
+        question = questionBank[index].getQuestionID();
+        questionTextView.setText(question);
 
         goodButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("Quiz", "Good button pressed"); // Test that listener is working.
                 Toast tmsg = Toast.makeText(getApplicationContext(), "Good clicked", Toast.LENGTH_SHORT);
                 tmsg.show();
+                changeQuestion();
             }
         });
 
@@ -60,8 +67,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick (View view) {
                 Log.d("Quiz", "Bad button pressed"); // Test that listener is working.
+                changeQuestion();
             }
         });
+    }
+
+    private void changeQuestion() {
+        index = (index +1)% questionBank.length; // So each time we answer
+        question = questionBank[index].getQuestionID(); // Get the question id of that item in the array.
+        questionTextView.setText(question); // Set the text to what that id holds for the question.
     }
 
     @Override
@@ -71,4 +85,6 @@ public class MainActivity extends AppCompatActivity {
         // TODO: Remove the Firebase event listener on the adapter.
 
     }
+
+
 }

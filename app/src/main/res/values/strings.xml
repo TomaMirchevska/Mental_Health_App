@@ -30,7 +30,7 @@
 
     <string name="correct_toast">"That's Correct !</string>
     <string name="incorrect_toast">"Sorry that's Incorrect !</string>
-
+    <string name="description">"Question: "</string>
     <string name="score_board">"Score = 0"</string>
 
     <string name="question_1">"Expressing your feelings to someone" </string>
