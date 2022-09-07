@@ -21,6 +21,20 @@ public class MainActivity extends AppCompatActivity {
     TextView questionTextView;
     ProgressBar progressBar;
 
+    // Question Bank.
+    private GoodBad[] questionBank = new com.example.mentalhealthapp.GoodBad[] {
+            new GoodBad(R.string.question_1, true),
+            new GoodBad(R.string.question_2, true),
+            new GoodBad(R.string.question_3, false),
+            new GoodBad(R.string.question_4, true),
+            new GoodBad(R.string.question_5, false),
+            new GoodBad(R.string.question_6, true),
+            new GoodBad(R.string.question_7, false),
+            new GoodBad(R.string.question_8, true),
+            new GoodBad(R.string.question_9, true),
+            new GoodBad(R.string.question_10, true),
+
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("Quiz", "Bad button pressed"); // Test that listener is working.
             }
         });
-
-
+    }
 
     @Override
     public void onStop() {
